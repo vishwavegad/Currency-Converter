@@ -17,3 +17,5 @@ A simple and interactive Currency Converter web application that allows users to
 - JavaScript (Vanilla JS) - Fetching exchange rates & handling user interactions
 - ExchangeRate-API - Provides live currency exchange rates
 - Netlify - Hosting and managing environment variables
+
+Live Demo - (https://currency-converter-mini-project.netlify.app/)
