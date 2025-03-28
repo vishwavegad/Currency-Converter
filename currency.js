@@ -1,5 +1,5 @@
-import CONFIG from './config.js';
-const API_KEY = CONFIG.API_KEY;
+// import CONFIG from './config.js';
+const API_KEY = process.env.API_KEY;
 const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest`;
 const dropdown = document.querySelectorAll(".dropdown select");
 const button = document.querySelector("button");
