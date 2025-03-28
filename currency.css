@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #FFFECB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.currency-container{
+    background-color: #FEA82F;
+    padding: 70px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 5px 5px 5px 5px rgba(122, 88, 14, 0.5) ;
+}
+h1{
+    color: #281201;
+}
+.currency-container .details{
+    margin-top: 40px;
+}
+.currency-container .details input{
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    padding-left: 0.5rem;
+    color: #281201;
+    width: 100%;
+    outline: none;
+    margin-bottom: 10px;
+    height: 2rem;
+    font-size: 1rem;
+}
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.dropdown p{
+    font-size: 1rem;
+}
+.selection-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFECB;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+}
+.selection-container img{
+    max-width: 2rem;
+}
+.selection-container select{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    width: auto;
+    background-color: #fffecb;
+}
+.message-container{
+    margin: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: #281201;
+}
+.currency-container .exchange-rate{
+    margin-top: 50px;
+}
+.currency-container .exchange-rate button{
+    min-width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #281201;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.currency-container .exchange-rate button:hover{
+    background-color: #4d2302;
+}
+@media (max-width: 500px) {
+    body{
+        align-items: center;
+    }
+    .currency-container{
+        padding: 40px;
+    }
+    .currency-container h1{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .currency-container .details{
+        margin-top: 15px;
+    }
+    .currency-container .details input{
+        color: #281201;
+        margin-bottom: 7px;
+        height: 0.7rem;
+        font-size: 0.6rem;
+    }
+    .dropdown{
+        margin-top: 0.7rem;
+    }
+    .dropdown p{
+        font-size: 0.8rem;
+    }
+    .selection-container{
+        padding: 0.3px;
+    }
+    .selection-container img{
+        max-width: 1rem;
+    }
+    .selection-container select{
+        font-size: 0.5rem;
+    }
+    .message-container{
+        margin: 20px;
+        font-size: 10px;
+    }
+    .currency-container .exchange-rate{
+        margin-top: 15px;
+    }
+    .currency-container .exchange-rate button{
+        padding: 0.3rem;
+        font-size: 0.4rem;
+    }
+}
