@@ -1,12 +1,9 @@
-// import CONFIG from './config.js';
-// const API_KEY = import.meta.env.API_KEY;
 const API_KEY = "";
-// const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest`;
 const dropdown = document.querySelectorAll(".dropdown select");
 const button = document.querySelector("button");
 const fromCurrency = document.querySelector(".from-container select");
 const toCurrency = document.querySelector(".to-container select");
-// console.log(import.meta.env.API_KEY);
+
 console.log("API Key:", API_KEY);
 
 fetch("/.netlify/functions/getAPIKey")
@@ -17,9 +14,6 @@ fetch("/.netlify/functions/getAPIKey")
     startFetchingData(API_KEY);
 })
 .catch(error=>console.error("Error fetching API key: ", error));
-
-
-
 
 for(let options of dropdown){
     for(let currencyCode in countryList){
