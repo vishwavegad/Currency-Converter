@@ -1,11 +1,26 @@
 // import CONFIG from './config.js';
-const API_KEY = process.env.API_KEY;
-const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest`;
+// const API_KEY = import.meta.env.API_KEY;
+const API_KEY = "";
+// const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest`;
 const dropdown = document.querySelectorAll(".dropdown select");
 const button = document.querySelector("button");
 const fromCurrency = document.querySelector(".from-container select");
 const toCurrency = document.querySelector(".to-container select");
 // console.log(import.meta.env.API_KEY);
+console.log("API Key:", API_KEY);
+
+fetch("/.netlify/functions/getAPIKey")
+.then(response=>response.json())
+.then(data=>{
+    const API_KEY = data.API_KEY;
+    console.log("API Key: ", API_KEY);
+    startFetchingData(API_KEY);
+})
+.catch(error=>console.error("Error fetching API key: ", error));
+
+
+
+
 for(let options of dropdown){
     for(let currencyCode in countryList){
         let newOption = document.createElement("option");
@@ -33,6 +48,10 @@ const updateFlag = (ele)=>{
 }
 
 const message = document.querySelector(".message-container");
+
+
+function startFetchingData(API_KEY){
+    const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest`;
 
 button.addEventListener("click", async(event)=>{
     event.preventDefault();
@@ -71,3 +90,4 @@ button.addEventListener("click", async(event)=>{
         message.innerText = "Failed to fetch conversion rate. Please try again"
     }
 })
+}
