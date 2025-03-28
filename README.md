@@ -13,7 +13,7 @@ A simple and interactive Currency Converter web application that allows users to
 
 🛠️ Technologies Used
 - HTML - Structure of the application
-- CSS (Tailwind or Vanilla CSS) - Styling the UI
+- CSS (Vanilla CSS) - Styling the UI
 - JavaScript (Vanilla JS) - Fetching exchange rates & handling user interactions
 - ExchangeRate-API - Provides live currency exchange rates
 - Netlify - Hosting and managing environment variables
